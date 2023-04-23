@@ -1,16 +1,19 @@
 import React from "react";
 import "./App.css";
 import TopNavBar from "./components/navbars/TopNavBar";
-import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
+// import { Route } from "react-router-dom";
+// import Home from "./pages/Home";
+
+// import AppRoutes from "./routes/routes";
+import TodoForm from "./features/todos/TodoForm";
+import TodoTable from "./features/todos/TodoTable";
 
 function App() {
   return (
     <React.Fragment>
       <TopNavBar />
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-      </Routes>
+      <TodoForm />
+      <TodoTable />
     </React.Fragment>
   );
 }
