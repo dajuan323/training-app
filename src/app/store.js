@@ -3,6 +3,7 @@ import counterReducer from "../features/counter/counterSlice";
 import postsReducer from "../features/post/postSlice";
 import usersReducer from "../features/users/usersSlice";
 import todoReducer from "../features/todos/todoSlice";
+import cartReducer from "../features/shopping/cartSlice";
 
 export const store = configureStore({
   reducer: {
@@ -10,5 +11,6 @@ export const store = configureStore({
     posts: postsReducer,
     users: usersReducer,
     todos: todoReducer,
+    cart: cartReducer,
   },
 });

@@ -1,16 +1,17 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
-import Todos from "../features/todos/TodoForm";
+import { Route } from "react-router-dom";
+import TodoList from "../pages/TodoList";
 import PostsList from "../features/post/PostsList";
 import Counter from "../features/counter/Counter";
-
+import Callback from "../pages/Callback";
 function AppRoutes() {
   return (
-    <Routes>
-      <Route path="todos" element={Todos} />
+    <>
+      <Route path="todolist" element={TodoList} />
       <Route path="posts" element={PostsList} />
       <Route path="counter" element={Counter} />
-    </Routes>
+      <Route path="callback" element={Callback} />
+    </>
   );
 }
 
