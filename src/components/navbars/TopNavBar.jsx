@@ -8,7 +8,7 @@ function TopNavBar() {
     >
       <div className="container">
         <a className="navbar-brand" href="/">
-          🏫
+          👑
         </a>
         <button
           className="navbar-toggler"
@@ -31,27 +31,22 @@ function TopNavBar() {
             </li>
             <li className="nav-item">
               <button className="nav-link px-2 text-white link-button">
-                Friends
+                Todos
               </button>
             </li>
             <li className="nav-item">
               <button href="#" className="nav-link px-2 text-white link-button">
-                Jobs
+                Shopping Cart
               </button>
             </li>
             <li className="nav-item">
               <button href="#" className="nav-link px-2 text-white link-button">
-                Tech Companies
+                Callback
               </button>
             </li>
             <li className="nav-item">
               <button href="#" className="nav-link px-2 text-white link-button">
-                Events
-              </button>
-            </li>
-            <li className="nav-item">
-              <button href="#" className="nav-link px-2 text-white link-button">
-                Test and Ajax Call
+                Counter
               </button>
             </li>
           </ul>
