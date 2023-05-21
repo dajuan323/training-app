@@ -18,7 +18,7 @@ function App() {
         <Route path="counter" element={<ReduxCounter />} />
         <Route path="shopping" element={<ShoppingCart />} />
         <Route path="callback/*" element={<Callback />}>
-          <Route path=":userId/*" element={<Callback />} />
+          <Route path=":userId/" element={<Callback />} />
         </Route>
       </Routes>
     </React.Fragment>
