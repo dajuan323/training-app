@@ -4,6 +4,7 @@ import postsReducer from "../features/post/postSlice";
 import usersReducer from "../features/users/usersSlice";
 import todoReducer from "../features/todos/todoSlice";
 import cartReducer from "../features/shopping/cartSlice";
+import modalReducer from "../features/shopping/modal/modalSlice";
 
 export const store = configureStore({
   reducer: {
@@ -12,5 +13,6 @@ export const store = configureStore({
     users: usersReducer,
     todos: todoReducer,
     cart: cartReducer,
+    modal: modalReducer,
   },
 });

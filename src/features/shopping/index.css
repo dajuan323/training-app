@@ -288,7 +288,7 @@ hr {
 }
 
 .modal {
-  background: var(--clr-white);
+  background-color: "white";
   width: 80vw;
   max-width: 400px;
   border-radius: var(--radius);
