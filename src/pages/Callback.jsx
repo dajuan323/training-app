@@ -5,11 +5,12 @@ import { useState } from "react";
 import { useEffect } from "react";
 import CallBackComponent from "../features/callbacks/CallBackComponent";
 import { useNavigate, useParams } from "react-router-dom";
+import { Row } from "reactstrap";
 import CallbackProfile from "./CallbackProfile";
 
 function Callback() {
   const navigate = useNavigate();
-  const userId = useParams();
+  const { userId } = useParams();
   const [peopleData, setData] = useState({
     companyArr: [],
     employeeComponents: [],
@@ -25,9 +26,9 @@ function Callback() {
     });
   }, []);
   const mapEmployee = (employee) => {
-    return userId ? (
-      <CallbackProfile worker={myTransportWorker} />
-    ) : (
+    return (
+      //   <CallbackProfile worker={myTransportWorker} />
+      // ) : (
       <CallBackComponent
         employee={employee}
         key={`employee${employee.id}`}
@@ -60,15 +61,17 @@ function Callback() {
     };
     navigate(`${friend.id}`, { state: stateForTransport });
   };
-
+  console.log(userId);
   // const callItBack =  useCallback((it)=>{
   //   console.log(it)
   // }, [])
-  return (
+  return userId ? (
+    <CallbackProfile workerData={myTransportWorker} />
+  ) : (
     <>
       <h1>Callback Practice</h1>
       <hr />
-      {peopleData.employeeComponents.map(mapEmployee)}
+      <Row>{peopleData.employeeComponents.map(mapEmployee)}</Row>
     </>
   );
 }

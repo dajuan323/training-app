@@ -1,11 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 function CallBackComponent(props) {
+  const navigate = useNavigate();
   const employee = props.employee;
   const goToProfile = (e) => {
     e.preventDefault();
     e.nativeEvent.stopImmediatePropagation();
-    props.onGoProfileClick(employee, e);
+    navigate(`${employee.id}`);
+    props.onWorkerClick(employee, e);
   };
   return (
     <>
