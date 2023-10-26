@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from "reactstrap";
 
-function CallbackProfile(props) {
+const CallbackProfile = (props) => {
   const worker = props.workerData;
   return (
     <Card>
@@ -14,6 +14,6 @@ function CallbackProfile(props) {
       </ul>
     </Card>
   );
-}
+};
 
 export default CallbackProfile;
