@@ -28,7 +28,8 @@
     "sabio-debug": "https://github.com/sabiocode/debug",
     "sweetalert": "^2.1.2",
     "toastr": "^2.1.4",
-    "web-vitals": "^2.1.2"
+    "web-vitals": "^2.1.2",
+    "zustand": "^4.4.4"
   },
   "scripts": {
     "start": "react-scripts start",

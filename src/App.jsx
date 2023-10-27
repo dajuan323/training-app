@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import TodoList from "./pages/TodoList";
 import ShoppingCart from "./pages/ShoppingCart";
 import Contextual from "./pages/Contextual";
+import Zustand from "./pages/zustand/Zustand";
 import { DataProvider } from "./features/context/InceptionContext";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path=":userId/" element={<Callback />} />
           </Route>
           <Route path="contextual" element={<Contextual />} />
+          <Route path="zustand" element={<Zustand />} />
         </Routes>
       </DataProvider>
     </React.Fragment>
