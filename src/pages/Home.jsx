@@ -49,6 +49,22 @@ function Home() {
                 </Link>
               </p>
             </div>
+            <div className="col-md-4">
+              <h2>Memoized</h2>
+              <p>
+                <Link to={"memoized"} className="btn btn-secondary">
+                  Go &raquo;
+                </Link>
+              </p>
+            </div>
+            <div className="col-md-4">
+              <h2>Contextual</h2>
+              <p>
+                <Link to={"contextual"} className="btn btn-secondary">
+                  Go &raquo;
+                </Link>
+              </p>
+            </div>
           </div>
 
           <hr />

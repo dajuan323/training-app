@@ -10,6 +10,7 @@ import ShoppingCart from "./pages/ShoppingCart";
 import Contextual from "./pages/Contextual";
 import Zustand from "./pages/zustand/Zustand";
 import { DataProvider } from "./features/context/InceptionContext";
+import Memoized from "./pages/Memoized";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           </Route>
           <Route path="contextual" element={<Contextual />} />
           <Route path="zustand" element={<Zustand />} />
+          <Route path="memoized" element={<Memoized />} />
         </Routes>
       </DataProvider>
     </React.Fragment>
