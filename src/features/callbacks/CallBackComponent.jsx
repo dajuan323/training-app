@@ -12,14 +12,14 @@ function CallBackComponent(props) {
   };
   return (
     <>
-      <div class="card" style={{ width: "18rem" }}>
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">{employee.id}</p>
-          <p class="card-text">{employee.name}</p>
-          <p class="card-text">{employee.job}</p>
-          <p class="card-text">{employee.age}</p>
-          <p class="card-text">{employee.degree}</p>
+      <div className="card" style={{ width: "18rem" }}>
+        <div className="card-body">
+          <h5 className="card-title">Card title</h5>
+          <p className="card-text">{employee.id}</p>
+          <p className="card-text">{employee.name}</p>
+          <p className="card-text">{employee.job}</p>
+          <p className="card-text">{employee.age}</p>
+          <p className="card-text">{employee.degree}</p>
           <button onClick={goToProfile} className="btn btn-primary">
             Go somewhere
           </button>

@@ -1,22 +1,25 @@
 import React from "react";
 import { useCallback } from "react";
-import { boatList } from "../data/practice";
+import { boatList } from "../../data/practice";
 import { useState } from "react";
 import { useEffect } from "react";
-import CallBackComponent from "../features/callbacks/CallBackComponent";
+import CallBackComponent from "../../features/callbacks/CallBackComponent";
 import { useNavigate, useParams } from "react-router-dom";
 import { Row } from "reactstrap";
-import CallbackProfile from "../features/callbacks/CallbackProfile";
+import CallbackProfile from "./CallbackProfile";
+import debug from "sabio-debug";
+const _logger = debug.extend("callback");
 
 function Callback() {
   const navigate = useNavigate();
   const { userId } = useParams();
+  const peopleArr = boatList;
   const [peopleData, setData] = useState({
     companyArr: [],
     employeeComponents: [],
   });
   useEffect(() => {
-    let newArr = boatList;
+    let newArr = peopleArr;
 
     setData((prevState) => {
       const pd = { ...prevState };
@@ -24,7 +27,9 @@ function Callback() {
       pd.employeeComponents = pd.companyArr;
       return pd;
     });
+    _logger(peopleData);
   }, []);
+
   const mapEmployee = (employee) => {
     return (
       //   <CallbackProfile worker={myTransportWorker} />
@@ -36,7 +41,6 @@ function Callback() {
       />
     );
   };
-  console.log(peopleData);
   const defaultWorkerData = {
     age: `TEST`,
     degree: `TEST`,
@@ -61,7 +65,7 @@ function Callback() {
     };
     navigate(`${friend.id}`, { state: stateForTransport });
   };
-  console.log(userId);
+  _logger(userId);
 
   return userId ? (
     <CallbackProfile workerData={myTransportWorker} />

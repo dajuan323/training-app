@@ -3,7 +3,7 @@ import "./App.css";
 import TopNavBar from "./components/navbars/TopNavBar";
 import { Routes, Route } from "react-router-dom";
 import ReduxCounter from "./pages/ReduxCounter";
-import Callback from "./pages/Callback";
+import Callback from "./pages/callback/Callback";
 import Home from "./pages/Home";
 import TodoList from "./pages/TodoList";
 import ShoppingCart from "./pages/ShoppingCart";
