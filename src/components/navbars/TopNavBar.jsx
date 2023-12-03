@@ -1,5 +1,6 @@
 import React from "react";
 import "../componentstyles.css";
+import { Link } from "react-router-dom";
 function TopNavBar() {
   return (
     <nav
@@ -25,46 +26,49 @@ function TopNavBar() {
         <div className="collapse navbar-collapse" id="navbarsExample04">
           <ul className="navbar-nav me-auto mb-2 mb-md-0">
             <li className="nav-item">
-              <button className="nav-link px-2 text-white link-button">
+              <Link to={"/"} className="nav-link px-2 text-white link-button">
                 Home
-              </button>
+              </Link>
             </li>
             <li className="nav-item">
-              <button className="nav-link px-2 text-white link-button">
+              <Link
+                to={"todolist"}
+                className="nav-link px-2 text-white link-button"
+              >
                 Todos
-              </button>
+              </Link>
             </li>
             <li className="nav-item">
-              <button
-                href="shopping"
+              <Link
+                to={"shopping"}
                 className="nav-link px-2 text-white link-button"
               >
                 Shopping Cart
-              </button>
+              </Link>
             </li>
             <li className="nav-item">
-              <button
-                href="callback"
+              <Link
+                to={"callback"}
                 className="nav-link px-2 text-white link-button"
               >
                 Callback
-              </button>
+              </Link>
             </li>
             <li className="nav-item">
-              <button
-                href="counter"
+              <Link
+                to={"counter"}
                 className="nav-link px-2 text-white link-button"
               >
                 Counter
-              </button>
+              </Link>
             </li>
             <li className="nav-item">
-              <button
-                href="useref"
+              <Link
+                to={"useref"}
                 className="nav-link px-2 text-white link-button"
               >
                 UseRef
-              </button>
+              </Link>
             </li>
           </ul>
           <div className="text-end">
