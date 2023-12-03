@@ -15,8 +15,7 @@ function UseRef() {
     <>
       <h1>UseRef</h1>
       <br />
-      <h3>Ref Age: {refObj.current}</h3>
-      <button>Add</button>
+      <h3>Ref Age: {refObj.current.age}</h3>
       <button onClick={addOne}>Add</button>
       <button onClick={cutOne}>Deduct</button>
     </>
