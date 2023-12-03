@@ -35,18 +35,35 @@ function TopNavBar() {
               </button>
             </li>
             <li className="nav-item">
-              <button href="#" className="nav-link px-2 text-white link-button">
+              <button
+                href="shopping"
+                className="nav-link px-2 text-white link-button"
+              >
                 Shopping Cart
               </button>
             </li>
             <li className="nav-item">
-              <button href="#" className="nav-link px-2 text-white link-button">
+              <button
+                href="callback"
+                className="nav-link px-2 text-white link-button"
+              >
                 Callback
               </button>
             </li>
             <li className="nav-item">
-              <button href="#" className="nav-link px-2 text-white link-button">
+              <button
+                href="counter"
+                className="nav-link px-2 text-white link-button"
+              >
                 Counter
+              </button>
+            </li>
+            <li className="nav-item">
+              <button
+                href="useref"
+                className="nav-link px-2 text-white link-button"
+              >
+                UseRef
               </button>
             </li>
           </ul>

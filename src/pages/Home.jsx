@@ -42,6 +42,14 @@ function Home() {
               </p>
             </div>
             <div className="col-md-4">
+              <h2>UseRef</h2>
+              <p>
+                <Link to={"useref"} className="btn btn-secondary">
+                  Go &raquo;
+                </Link>
+              </p>
+            </div>
+            <div className="col-md-4">
               <h2>Counter</h2>
               <p>
                 <Link to={"counter"} className="btn btn-secondary">

@@ -10,6 +10,8 @@ import ShoppingCart from "./pages/ShoppingCart";
 import Contextual from "./pages/Contextual";
 import Zustand from "./pages/zustand/Zustand";
 import { DataProvider } from "./features/context/InceptionContext";
+import UseRef from "./pages/UseRef";
+import Portal from "./pages/Portal";
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
           </Route>
           <Route path="contextual" element={<Contextual />} />
           <Route path="zustand" element={<Zustand />} />
+          <Route path="portal" element={<Portal />} />
+          <Route path="useref" element={<UseRef />} />
         </Routes>
       </DataProvider>
     </React.Fragment>
