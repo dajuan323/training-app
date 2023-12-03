@@ -13,27 +13,30 @@ import { DataProvider } from "./features/context/InceptionContext";
 import Memoized from "./pages/Memoized";
 import UseRef from "./pages/UseRef";
 import Portal from "./pages/Portal";
+import { HomeDataProvider } from "./features/context/HomeContext";
 
 function App() {
   return (
     <React.Fragment>
       <DataProvider>
-        <TopNavBar />
+        <HomeDataProvider>
+          <TopNavBar />
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="todolist" element={<TodoList />} />
-          <Route path="counter" element={<ReduxCounter />} />
-          <Route path="shopping" element={<ShoppingCart />} />
-          <Route path="callback/*" element={<Callback />}>
-            <Route path=":userId/" element={<Callback />} />
-          </Route>
-          <Route path="contextual" element={<Contextual />} />
-          <Route path="zustand" element={<Zustand />} />
-          <Route path="memoized" element={<Memoized />} />
-          <Route path="portal" element={<Portal />} />
-          <Route path="useref" element={<UseRef />} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="todolist" element={<TodoList />} />
+            <Route path="counter" element={<ReduxCounter />} />
+            <Route path="shopping" element={<ShoppingCart />} />
+            <Route path="callback/*" element={<Callback />}>
+              <Route path=":userId/" element={<Callback />} />
+            </Route>
+            <Route path="contextual" element={<Contextual />} />
+            <Route path="zustand" element={<Zustand />} />
+            <Route path="memoized" element={<Memoized />} />
+            <Route path="portal" element={<Portal />} />
+            <Route path="useref" element={<UseRef />} />
+          </Routes>
+        </HomeDataProvider>
       </DataProvider>
     </React.Fragment>
   );
