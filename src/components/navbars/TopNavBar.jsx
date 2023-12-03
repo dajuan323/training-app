@@ -56,6 +56,14 @@ function TopNavBar() {
             </li>
             <li className="nav-item">
               <Link
+                to={"memoized"}
+                className="nav-link px-2 text-white link-button"
+              >
+                Memoized
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
                 to={"counter"}
                 className="nav-link px-2 text-white link-button"
               >
