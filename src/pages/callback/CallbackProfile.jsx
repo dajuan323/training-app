@@ -12,9 +12,9 @@ function CallbackProfile(props) {
   const worker = props.workerData;
   const userId = useParams();
   const databox = boatList;
-  const worker2 = databox.filter(
+  const [worker2] = databox.filter(
     (person) => person.id === parseInt(userId.userId)
-  )[0];
+  );
   console.log(worker2);
   const location = useLocation();
   const { payload, type } = location.state;
