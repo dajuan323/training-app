@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback, useContext } from "react";
 import CallBackComponent from "../../features/callbacks/CallBackComponent";
 import { useNavigate, useParams } from "react-router-dom";
-import { Row } from "reactstrap";
 import CallbackProfile from "./CallbackProfile";
 import InceptionContext from "../../features/context/InceptionContext";
 
@@ -16,18 +15,18 @@ function Callback() {
     companyArr: [],
     employeeComponents: [],
   });
-  _logger(peopleArr);
   useEffect(() => {
     let newArr = peopleArr;
 
     setData((prevState) => {
-      const pd = { ...prevState };
+      let pd = { ...prevState };
       pd.companyArr = newArr;
       pd.employeeComponents = pd.companyArr;
       return pd;
     });
-    _logger(peopleData);
+    return newArr;
   }, []);
+  _logger(peopleArr);
 
   const mapEmployee = (employee) => {
     return (
@@ -72,7 +71,11 @@ function Callback() {
     <>
       <h1>Callback Practice</h1>
       <hr />
-      <Row>{peopleData.employeeComponents.map(mapEmployee)}</Row>
+      <div className="col">
+        <div className="row">
+          {peopleData.employeeComponents.map(mapEmployee)}
+        </div>
+      </div>
     </>
   );
 }

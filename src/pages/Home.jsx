@@ -3,12 +3,18 @@ import React from "react";
 // import { useContext } from "react";
 // import debug from "sabio-debug";
 import HomePage from "../features/home/HomePage";
+import { HomeDataProvider } from "../features/context/HomeContext";
+
+// import HomeContext from "../features/context/HomeContext";
 // const _logger = debug.extend("home");
 
 function Home() {
+  // _logger(homeData);
   return (
     <>
-      <HomePage />
+      <HomeDataProvider>
+        <HomePage />
+      </HomeDataProvider>
       <footer className="container">
         <p>&copy; Sabio 2019-2020</p>
       </footer>
