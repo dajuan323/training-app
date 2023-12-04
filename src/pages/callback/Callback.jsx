@@ -1,23 +1,22 @@
-import React from "react";
-import { useCallback } from "react";
-import { boatList } from "../../data/practice";
-import { useState } from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect, useCallback, useContext } from "react";
 import CallBackComponent from "../../features/callbacks/CallBackComponent";
 import { useNavigate, useParams } from "react-router-dom";
 import { Row } from "reactstrap";
 import CallbackProfile from "./CallbackProfile";
+import InceptionContext from "../../features/context/InceptionContext";
+
 import debug from "sabio-debug";
 const _logger = debug.extend("callback");
 
 function Callback() {
   const navigate = useNavigate();
   const { userId } = useParams();
-  const peopleArr = boatList;
+  const peopleArr = useContext(InceptionContext).dataStore;
   const [peopleData, setData] = useState({
     companyArr: [],
     employeeComponents: [],
   });
+  _logger(peopleArr);
   useEffect(() => {
     let newArr = peopleArr;
 
